@@ -1,0 +1,71 @@
+.HomePageContainer {
+    position: relative;
+    top: 75px;
+    animation: fadeIn 3s;
+    padding-left: 5vw;
+    padding-right: 5vw;
+}
+
+#HomePagePicture {
+    width: 400px;
+}
+
+.HomePageInfoContainer {
+    width: 100%;
+    /* background-color: black; */
+    height: fit-content;
+}
+
+.HomePageInfoContainer h3 {
+    font-family: var(--Font2);
+
+}
+
+.AboutMeInfo {
+    width: 50%;
+}
+
+.BoxLine {
+    position: relative;
+    border: 5px solid var(--white);
+    top: 0px;
+    left: 0px;
+    width: 400px;
+    height: 532px;
+    z-index: -1;
+}
+
+.LanguageLogos {
+    height: 40px;
+    width: 40px;
+    margin-right: 10px;
+    border-radius: 5px;
+    transition: all 1s;
+}
+
+
+@media only screen and (max-width: 900px) {
+
+    .HomePageContainer {
+        top: 0px;
+    }
+
+    .HomePageInfoContainer {
+        margin-top: 10px;
+        flex-direction: column;
+        padding-bottom: 5vh;
+    }
+
+    .AboutMeInfo {
+        width: 90%;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+
+
+    #HomePagePicture {
+        width: 80vw;
+        padding-top: 20px;
+    }
+}

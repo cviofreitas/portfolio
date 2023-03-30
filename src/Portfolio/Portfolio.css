@@ -1,0 +1,246 @@
+.PortfolioContainer {
+    overflow-x: hidden;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+.ProjectCardContainer {
+    margin-top: 30px;
+    animation: fadeIn 2s;
+    overflow-x: hidden;
+
+}
+
+.ProjectCard {
+    width: 600px;
+    background: linear-gradient(90deg, white, rgb(202, 202, 202));
+    height: 600px;
+    position: absolute;
+    transform: translateX(-50%);
+    border-radius: 20px;
+    overflow: hidden;
+    color: var(--darkBlue);
+}
+
+.ProjectCard .DeskTopThumbnail {
+    width: 600px;
+    height: 344px;
+    object-fit: cover;
+
+}
+
+.ProjectCard .MobileThumbnail {
+    position: relative;
+    top: -100px;
+    left: 430px;
+    object-fit: cover;
+    width: 150px;
+    height: 325px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.376);
+    border-radius: 10px;
+}
+
+.ProjectCard.Number0 {
+    transform: translateX(-150%);
+    scale: .8;
+    opacity: .0;
+
+}
+
+.ProjectCard.Number0.left {
+    transform: translateX(-150%);
+    scale: .8;
+    opacity: .5;
+    transition: all .5s;
+}
+
+.ProjectCard.Number1 {
+    transform: translateX(-150%);
+    scale: .8;
+    opacity: .5;
+
+}
+
+.ProjectCard.Number2 {
+    z-index: 3;
+
+}
+
+.ProjectCard.Number3 {
+    transform: translateX(25%);
+    scale: .8;
+    opacity: .5;
+
+}
+
+.ProjectCard.Number4 {
+    transform: translateX(25%);
+    scale: .8;
+    opacity: .0;
+
+}
+
+.ProjectCard.Number4.right {
+    transform: translateX(25%);
+    scale: .8;
+    opacity: .5;
+    transition: all .5s;
+}
+
+.ProjectCard.Number2.right {
+    transform: translateX(-150%);
+    scale: .8;
+    z-index: 0;
+    filter: brightness(50%);
+    transition: all .5s;
+}
+
+.ProjectCard.Number2.left {
+    transform: translateX(25%);
+    scale: .8;
+    z-index: 1;
+    filter: brightness(50%);
+    transition: all .5s;
+}
+
+.ProjectCard.Number3.right {
+    transform: translateX(-50%);
+    scale: 1;
+    z-index: 3;
+    opacity: 1;
+    transition: all .5s;
+}
+
+.ProjectCard.Number1.left {
+    transform: translateX(-50%);
+    scale: 1;
+    z-index: 3;
+    opacity: 1;
+    transition: all .5s;
+}
+
+
+
+.ScrollButton {
+    cursor: pointer;
+    position: absolute;
+    width: 50vw;
+    height: 450px;
+    z-index: 1;
+    background: none;
+    border: none;
+    top: 180px;
+}
+
+.ScrollButton:active {
+    border: none;
+    outline: none;
+}
+
+.ScrollButton.Left {
+    left: 0px;
+}
+
+.ScrollButton.Right {
+    right: 0px;
+}
+
+.ProjectSummaryContainer {
+    position: absolute;
+    width: 390px;
+    z-index: 2;
+    height: 220px;
+    bottom: 20px;
+    left: 20px;
+}
+
+.ProjectSummaryContainer h3 {
+    font-family: var(--Font2);
+    text-shadow: 5px 5px 6px rgba(0, 0, 0, 0.182);
+}
+
+
+.ProjectLinks {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    position: absolute;
+    gap: 20px;
+    width: 100%;
+}
+
+.ProjectLinks img {
+    height: 40px;
+    width: 40px;
+    opacity: .3;
+    transition: all .5s;
+}
+
+.ProjectLinks img:hover {
+    height: 40px;
+    width: 40px;
+    opacity: 1;
+}
+
+.Mobile {
+    display: none;
+}
+
+@media only screen and (max-width: 800px) {
+    .Desktop {
+        display: none;
+    }
+
+    .Mobile {
+        display: contents;
+    }
+
+    .ProjectCard {
+        width: 80vw;
+        position: relative;
+        top: -40px;
+        transform: translateX(0%);
+        margin: 40px;
+        height: fit-content;
+    }
+
+    .ProjectCard .DeskTopThumbnail {
+        width: 80vw;
+        height: auto;
+
+    }
+
+    .ProjectCard .MobileThumbnail {
+        position: initial;
+    }
+
+    .ProjectLinks {
+        position: relative;
+        justify-content: flex-start;
+    }
+
+    .ProjectSummaryContainer {
+        position: inherit;
+        height: fit-content
+    }
+
+    .ProjectSummaryContainer p {
+        padding-bottom: 0px;
+        margin-bottom: 0px;
+        font-size: .8rem;
+    }
+
+    .MobileProjectHeader {
+        padding: 20px 20px 0px 20px;
+    }
+
+    .MobileProjectHeader h3 {
+        font-family: var(--Font2);
+        font-size: 1.7rem;
+        text-shadow: 5px 5px 6px rgba(0, 0, 0, 0.182);
+    }
+
+
+}

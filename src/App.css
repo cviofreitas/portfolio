@@ -1,0 +1,118 @@
+:root {
+    --darkBlue: #193441;
+    --darkestBlue: #0a1a27;
+    --grayBlue: #3E606F;
+    --gray: #91AA9D;
+    --lightGray: #D1DBBD;
+    --white: #FCFFF5;
+    --Font1: 'Gloock', serif;
+    --Font2: 'Phudu', cursive;
+    --Font3: 'Noto Serif Toto', serif;
+}
+
+body {
+    background-color: #0a1a27;
+    color: var(--white);
+    padding: 0px;
+    margin: 0px;
+    height: fit-content;
+    font-family: var(--Font3);
+}
+
+h1 {
+    font-family: var(--Font1);
+    font-size: 6rem;
+    margin: 0px;
+}
+
+h2 {
+    font-family: var(--Font1);
+    font-size: 4rem;
+    margin: 0px;
+}
+
+h3 {
+    font-family: var(--Font1);
+    font-size: 2rem;
+    margin: 0px;
+}
+
+.NavBarLink {
+    text-decoration: none;
+    color: var(--lightGray);
+}
+
+.Padding20 {
+    padding: 20px;
+}
+
+.Gap20 {
+    gap: 20px;
+}
+
+.FlexColumn {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.FlexRow {
+    display: flex;
+    flex-direction: row;
+}
+
+.FlexCenter {
+    align-items: center;
+    justify-items: center;
+}
+
+.FlexBetween {
+    justify-content: space-between;
+}
+
+.MarginTop10 {
+    margin-top: 10px;
+}
+
+.MarginTop20 {
+    margin-top: 20px;
+}
+
+.MarginBottom20 {
+    margin-bottom: 20px;
+}
+
+.MarginBottom10 {
+    margin-bottom: 10px;
+}
+
+.MarginRight10 {
+    margin-right: 10px;
+}
+
+.MarginLeft10 {
+    margin-left: 10px;
+}
+
+.MarginLeft20 {
+    margin-left: 20px;
+}
+
+.MarginRight20 {
+    margin-right: 20px;
+}
+
+@media only screen and (max-width: 900px) {
+    h1 {
+        font-size: 4rem;
+    }
+
+    h2 {
+        font-size: 3rem;
+    }
+
+    h3 {
+        font-size: 2rem;
+    }
+
+}
