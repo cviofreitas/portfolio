@@ -12,9 +12,9 @@ const NavBar = () => {
                 </p>
             </Link>
 
-            <p>
+            {/* <p>
                 about
-            </p>
+            </p> */}
             <Link
                 className='NavBarLink'
                 to='/portfolio'>
