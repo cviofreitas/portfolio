@@ -31,19 +31,8 @@ const projectsArray = [
         githubLink: 'https://github.com/cviofreitas/proma_project_manager',
         languages: [Reactlogo, Redux, MaterialUi, css, html, js, Nodejs],
         title: 'Proma',
-        subTitle: 'Project Management App',
+        subTitle: 'Project Management App (React App)',
         description: 'A fully responsive mobile and desktop app featuring an easy to use invocing system. Create and edit invoices with only a few clicks.'
-
-    },
-    {
-        deskTopThumbnail: [Connect4Desktop],
-        mobileThumbnail: [Connect4Mobile],
-        link: 'https://connect-four-fun.vercel.app/',
-        githubLink: 'https://github.com/cviofreitas/connect_four',
-        languages: [html, css, js, jQuery],
-        title: 'Connect4',
-        subTitle: '',
-        description: 'Created with the idea that it could actually be seen on the app store. This was a fun project to try out a few CSS animations as well.'
 
     },
     {
@@ -53,7 +42,7 @@ const projectsArray = [
         githubLink: 'https://github.com/cviofreitas/ShoppingCart_React_Redux',
         languages: [MaterialUi, css, html, js, Reactlogo, Redux, Nodejs],
         title: 'Shopping Cart',
-        subTitle: '',
+        subTitle: '(React App)',
         description: 'A simple to use shopping experience. The goal of this project was to better understand state management, props, reusable components, and responsive design.'
 
     },
@@ -65,8 +54,19 @@ const projectsArray = [
         githubLink: 'https://github.com/cviofreitas/to_do_app',
         languages: [css, html, js, Reactlogo, Nodejs],
         title: 'REMINDERS',
-        subTitle: 'To do app',
+        subTitle: 'To do app (React App)',
         description: 'Created with React, this was my first project learning simple React Hooks and forms.'
+
+    },
+    {
+        deskTopThumbnail: [Connect4Desktop],
+        mobileThumbnail: [Connect4Mobile],
+        link: 'https://connect-four-fun.vercel.app/',
+        githubLink: 'https://github.com/cviofreitas/connect_four',
+        languages: [html, css, js, jQuery],
+        title: 'Connect4',
+        subTitle: '',
+        description: 'Created with the idea that it could actually be seen on the app store. This was a fun project to try out a few CSS animations as well.'
 
     },
     {

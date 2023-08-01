@@ -62,8 +62,9 @@
 .TitleContainer h4 {
     font-size: 1.2rem;
     margin-top: 5px;
-    font-family: var(--Font2);
+    font-family: var(--Font1);
     letter-spacing: 1px;
+    opacity: .6;
 }
 
 .TitleContainer p {
