@@ -4,16 +4,40 @@
     animation: fadeIn 3s;
     padding-left: 5vw;
     padding-right: 5vw;
+    display: flex;
+    justify-content: center;
+
+
+
 }
 
 #HomePagePicture {
     width: 400px;
+    height: 530px;
+    border-radius: 5px;
+}
+
+.ProjectsButton {
+    font-family: var(--Font1);
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    background: none;
+    color: var(--lightGray);
+    transition: all .5s;
+}
+
+.ProjectsButton:hover {
+    scale: 1.05;
+    color: var(--gray);
 }
 
 .HomePageInfoContainer {
-    width: 100%;
-    /* background-color: black; */
+    position: fixed;
+    max-width: 1200px;
+    padding: 20px;
     height: fit-content;
+    border-radius: 20px;
 }
 
 .HomePageInfoContainer h3 {
@@ -46,23 +70,47 @@
 
 @media only screen and (max-width: 900px) {
 
+    .LanguageLogos {
+        height: 21px;
+        width: 21px;
+    }
+
+
+
+    .AboutMeInfo h3 {
+        font-size: 1rem;
+    }
+
     .HomePageContainer {
-        top: 0px;
+        top: -50px;
+        position: relative;
     }
 
     .HomePageInfoContainer {
         margin-top: 10px;
         flex-direction: column;
         padding-bottom: 5vh;
+        width: 100vw;
+        flex-direction: column;
+        position: relative;
     }
 
+
     .AboutMeInfo {
-        width: 90%;
+        width: 400px;
+        margin-bottom: 20px;
+    }
+
+    #HomePagePicture {
+        width: 400px;
+        height: auto;
     }
 }
 
 @media only screen and (max-width: 600px) {
-
+    .AboutMeInfo {
+        width: 90%;
+    }
 
     #HomePagePicture {
         width: 80vw;

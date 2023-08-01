@@ -1,7 +1,8 @@
 import { React, useState } from 'react'
+import { useEffect } from 'react'
 
 import './Portfolio.css'
-import ProjectCard from './ProjectCard'
+import Project from './Project'
 import ProjectCardMobile from './ProjectCardMobile'
 
 import projectsArray from './projectsArray'
@@ -10,51 +11,51 @@ const Porftolio = () => {
     const [count, setCount] = useState(0)
     const [direction, setDirection] = useState('')
 
+    // old code for carousel *not in use*
 
-    const carouselArray = (array, currValue) => {
-        let newArray = []
-        console.log(currValue)
+    // const carouselArray = (array, currValue) => {
+    //     let newArray = []
 
-        if (currValue == array.length || currValue <= 0 - array.length) { setCount(0) }
-        newArray.push(array.at(currValue))
-        newArray.unshift(array.at(currValue - 1))
-        newArray.unshift(array.at(currValue - 2))
-        newArray.push(array.at(currValue > array.length - 2 ? 0 : currValue + 1))
-        newArray.push(array.at(currValue > array.length - 2 ? 1 : currValue + 2))
-        return (newArray)
-    }
+    //     if (currValue == array.length || currValue <= 0 - array.length) { setCount(0) }
+    //     newArray.push(array.at(currValue))
+    //     newArray.unshift(array.at(currValue - 1))
+    //     newArray.unshift(array.at(currValue - 2))
+    //     newArray.push(array.at(currValue > array.length - 2 ? 0 : currValue + 1))
+    //     newArray.push(array.at(currValue > array.length - 2 ? 1 : currValue + 2))
+    //     return (newArray)
+    // }
 
-    const moveRight = () => {
+    const [scrollPosition, setScrollPosition] = useState(0);
+    const [indexNum, setIndexNum] = useState(-1)
 
-        setDirection('right')
-        setTimeout(() => {
-            setDirection('');
-            setCount(count + 1);
-        }, 500)
-    }
-    const moveLeft = () => {
+    useEffect(() => {
+        function handleScroll() {
+            setScrollPosition(window.scrollY);
+            scrollPosition < 100 ? setIndexNum(-1) : setIndexNum(1)
+        }
 
-        setDirection('left')
-        setTimeout(() => {
-            setDirection('')
-            setCount(count - 1);
-        }, 500)
-    }
+        window.addEventListener("scroll", handleScroll);
+        return () => {
+            window.removeEventListener("scroll", handleScroll);
+        };
+    }, [scrollPosition]);
+
+
+
+
     return (
-        <div className='PortfolioContainer FlexColumn FlexCenter'>
+        <div className={`PortfolioContainer FlexColumn FlexCenter ${scrollPosition > 10 ? '' : 'disableClick'}`}
+            style={{
+                zIndex: `${indexNum}`,
+                opacity: `calc(0 + ${scrollPosition * 0.003})`,
+            }}>
             <div class="Desktop">
-                <button className='ScrollButton Left' onClick={() => moveLeft()} />
-                <div className='ProjectCardContainer'>
+                <div className='ProjectCardContainer  FlexColumn Gap20 Padding20'>
                     {
-                        carouselArray(projectsArray, count).map((project, index) =>
-                            <ProjectCard project={project} index={index} direction={direction} />)
+                        projectsArray.map((project, index) =>
+                            <Project project={project} index={index} direction={direction} />)
                     }
                 </div>
-                <button className='ScrollButton Right' onClick={() => moveRight()} />
-            </div>
-
-            <div className='Mobile'>
-
             </div>
             <div class="Mobile">
                 <div className='ProjectCardContainer'>
@@ -64,14 +65,6 @@ const Porftolio = () => {
                     }
                 </div>
             </div>
-
-            <div className='Mobile'>
-
-            </div>
-
-
-
-
         </div>
 
     )

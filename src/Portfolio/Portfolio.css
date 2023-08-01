@@ -1,5 +1,8 @@
 .PortfolioContainer {
     overflow-x: hidden;
+    position: relative;
+    top: 300px;
+
 }
 
 body {
@@ -11,11 +14,17 @@ body {
     animation: fadeIn 2s;
     overflow-x: hidden;
 
+
+
+}
+
+.disableClick {
+    pointer-events: none;
 }
 
 .ProjectCard {
     width: 600px;
-    background: linear-gradient(90deg, white, rgb(202, 202, 202));
+    background: linear-gradient(360deg, var(--darkestBlue), rgb(28, 40, 51));
     height: 600px;
     position: absolute;
     transform: translateX(-50%);
@@ -28,7 +37,6 @@ body {
     width: 600px;
     height: 344px;
     object-fit: cover;
-
 }
 
 .ProjectCard .MobileThumbnail {
@@ -44,65 +52,60 @@ body {
 
 .ProjectCard.Number0 {
     transform: translateX(-150%);
-    scale: .8;
-    opacity: .0;
-
+    scale: 0.8;
+    opacity: 0;
 }
 
 .ProjectCard.Number0.left {
     transform: translateX(-150%);
-    scale: .8;
-    opacity: .5;
-    transition: all .5s;
+    scale: 0.8;
+    opacity: 0.5;
+    transition: all 0.5s;
 }
 
 .ProjectCard.Number1 {
     transform: translateX(-150%);
-    scale: .8;
-    opacity: .5;
-
+    scale: 0.8;
+    opacity: 0.5;
 }
 
 .ProjectCard.Number2 {
     z-index: 3;
-
 }
 
 .ProjectCard.Number3 {
     transform: translateX(25%);
-    scale: .8;
-    opacity: .5;
-
+    scale: 0.8;
+    opacity: 0.5;
 }
 
 .ProjectCard.Number4 {
     transform: translateX(25%);
-    scale: .8;
-    opacity: .0;
-
+    scale: 0.8;
+    opacity: 0;
 }
 
 .ProjectCard.Number4.right {
     transform: translateX(25%);
-    scale: .8;
-    opacity: .5;
-    transition: all .5s;
+    scale: 0.8;
+    opacity: 0.5;
+    transition: all 0.5s;
 }
 
 .ProjectCard.Number2.right {
     transform: translateX(-150%);
-    scale: .8;
+    scale: 0.8;
     z-index: 0;
     filter: brightness(50%);
-    transition: all .5s;
+    transition: all 0.5s;
 }
 
 .ProjectCard.Number2.left {
     transform: translateX(25%);
-    scale: .8;
+    scale: 0.8;
     z-index: 1;
     filter: brightness(50%);
-    transition: all .5s;
+    transition: all 0.5s;
 }
 
 .ProjectCard.Number3.right {
@@ -110,7 +113,7 @@ body {
     scale: 1;
     z-index: 3;
     opacity: 1;
-    transition: all .5s;
+    transition: all 0.5s;
 }
 
 .ProjectCard.Number1.left {
@@ -118,10 +121,8 @@ body {
     scale: 1;
     z-index: 3;
     opacity: 1;
-    transition: all .5s;
+    transition: all 0.5s;
 }
-
-
 
 .ScrollButton {
     cursor: pointer;
@@ -161,7 +162,6 @@ body {
     text-shadow: 5px 5px 6px rgba(0, 0, 0, 0.182);
 }
 
-
 .ProjectLinks {
     display: flex;
     justify-content: flex-end;
@@ -174,8 +174,8 @@ body {
 .ProjectLinks img {
     height: 40px;
     width: 40px;
-    opacity: .3;
-    transition: all .5s;
+    opacity: 0.3;
+    transition: all 0.5s;
 }
 
 .ProjectLinks img:hover {
@@ -188,7 +188,24 @@ body {
     display: none;
 }
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 900px) {
+
+    .MobileProjectHeader h2 {
+        font-size: 1.5rem;
+        opacity: .5;
+        /* text-decoration: underline; */
+    }
+
+    .MobileLanguageLogos {
+        height: 25px;
+        width: 25px;
+        margin-right: 10px;
+    }
+
+    .PortfolioContainer {
+        top: -100px;
+    }
+
     .Desktop {
         display: none;
     }
@@ -199,6 +216,7 @@ body {
 
     .ProjectCard {
         width: 80vw;
+        padding: 10px;
         position: relative;
         top: -40px;
         transform: translateX(0%);
@@ -209,31 +227,60 @@ body {
     .ProjectCard .DeskTopThumbnail {
         width: 80vw;
         height: auto;
+        border-radius: 10px;
 
     }
 
     .ProjectCard .MobileThumbnail {
         position: initial;
+        width: 100%;
+        height: 100%;
     }
 
     .ProjectLinks {
         position: relative;
         justify-content: flex-start;
+        width: fit-content;
+        scale: .7;
+    }
+
+    .ProjectLinks a {
+        display: flex;
+        gap: 5px;
+        text-decoration: none;
+        color: rgba(255, 255, 255, 0.713);
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    .ProjectLinks a h3 {
+        font-size: 1.5rem;
+    }
+
+    .ProjectLinks img {
+        height: 30px;
+        width: 30px;
+        opacity: 1;
+        filter: invert(70%) drop-shadow(4px 4px 6px rgb(0, 0, 0));
+
     }
 
     .ProjectSummaryContainer {
         position: inherit;
-        height: fit-content
+        height: fit-content;
     }
 
     .ProjectSummaryContainer p {
         padding-bottom: 0px;
         margin-bottom: 0px;
-        font-size: .8rem;
+        font-size: 0.8rem;
+        color: white;
     }
 
     .MobileProjectHeader {
         padding: 20px 20px 0px 20px;
+        color: white;
     }
 
     .MobileProjectHeader h3 {
@@ -241,6 +288,4 @@ body {
         font-size: 1.7rem;
         text-shadow: 5px 5px 6px rgba(0, 0, 0, 0.182);
     }
-
-
 }

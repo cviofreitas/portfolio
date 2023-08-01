@@ -1,28 +1,34 @@
 import React from 'react'
+import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import './NavBar.css'
 const NavBar = () => {
+
+    const [scrollPosition, setScrollPosition] = useState(0);
+
+    useEffect(() => {
+        function handleScroll() {
+            setScrollPosition(window.scrollY);
+        }
+        window.addEventListener("scroll", handleScroll);
+        return () => {
+            window.removeEventListener("scroll", handleScroll);
+        };
+    }, []);
+
     return (
-        <div className='NavBarContainer FlexRow FlexCenter FlexBetween'>
+        <div className='NavBarContainer FlexColumn FlexCenter'
+            style={{ opacity: `calc(0 + ${scrollPosition * 0.0035})`, }}>
             <Link
-                className='NavBarLink'
-                to='/'>
-                <p>
+                className={`NavBarLink ${scrollPosition > 10 ? '' : 'disableClick'}`}
+                to='/'
+                onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
+                <p style={{ opacity: `calc(0 + ${scrollPosition * 0.0035})`, }}>
                     home
                 </p>
-            </Link>
+            </Link >
 
-            {/* <p>
-                about
-            </p> */}
-            <Link
-                className='NavBarLink'
-                to='/portfolio'>
-                <p>
-                    portfolio
-                </p>
-            </Link>
-        </div>
+        </div >
     )
 }
 

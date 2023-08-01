@@ -5,6 +5,7 @@ import './App.css'
 import HomePage from "./HomePage/HomePage";
 import NavBar from "./Navbar/NavBar"
 import Porftolio from "./Portfolio/Porftolio";
+import Lines from "./Decoration/Lines";
 function App() {
   const [displayPages, setDisplayPages] = useState(false)
 
@@ -21,8 +22,10 @@ function App() {
               <NavBar />
               <Routes>
                 <Route path='/' element={<HomePage />} />
-                <Route path='/portfolio' element={<Porftolio />} />
+
               </Routes>
+              <Porftolio />
+              <Lines />
             </>
 
 

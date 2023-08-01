@@ -17,6 +17,7 @@ body {
     margin: 0px;
     height: fit-content;
     font-family: var(--Font3);
+    /* scroll-behavior: smooth; */
 }
 
 h1 {
@@ -37,10 +38,7 @@ h3 {
     margin: 0px;
 }
 
-.NavBarLink {
-    text-decoration: none;
-    color: var(--lightGray);
-}
+
 
 .Padding20 {
     padding: 20px;

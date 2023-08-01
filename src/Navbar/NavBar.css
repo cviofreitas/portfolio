@@ -10,4 +10,17 @@
     top: 0px;
     z-index: 20;
     box-shadow: 0px 10px 30px var(--darkestBlue);
+    justify-content: space-between;
+}
+
+.NavBarLink {
+    text-decoration: none;
+    color: var(--lightGray);
+    font-size: 1.5rem;
+    transition: all .5s;
+}
+
+.NavBarLink:hover {
+    color: var(--gray);
+    scale: 1.05;
 }

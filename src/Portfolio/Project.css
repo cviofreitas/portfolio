@@ -1,0 +1,108 @@
+.ProjectDisplayContainer {
+    width: 800px;
+    margin-bottom: 50px;
+    background: linear-gradient(360deg, var(--darkestBlue), rgb(28, 40, 51));
+    padding: 20px;
+    border-radius: 20px;
+}
+
+.imagesContainer {
+    margin: 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 375px;
+    width: inherit;
+}
+
+
+
+.DesktopImageContainer {
+    height: 375px;
+    width: 600px;
+    border-radius: 10px;
+    transition: all .5s;
+}
+
+.DesktopImageContainer:hover {
+    scale: 1.02;
+
+}
+
+
+
+.DesktopImageContainer a {
+    width: inherit;
+    height: inherit;
+}
+
+.MobileImageContainer {
+    width: 180px;
+    display: flex;
+    transition: all .5s;
+}
+
+
+
+.ProjectImage {
+    height: inherit;
+    width: inherit;
+    border-radius: 10px;
+}
+
+
+.MobileImage {
+    height: 375px;
+}
+
+.TitleContainer h3 {
+    font-family: var(--Font2);
+}
+
+.TitleContainer h4 {
+    font-size: 1.2rem;
+    margin-top: 5px;
+    font-family: var(--Font2);
+    letter-spacing: 1px;
+}
+
+.TitleContainer p {
+    font-family: 'Courier New', Courier, monospace;
+
+}
+
+.ProjectHeader {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+    padding-bottom: 10px;
+}
+
+
+
+.githubLink {
+    text-decoration: none;
+    color: white;
+    display: flex;
+    align-items: center;
+    opacity: .5;
+    margin-top: 20px;
+    scale: .6;
+    transition: all .3s;
+}
+
+.githubLink:hover {
+    opacity: 1;
+}
+
+.githubLink h3 {
+    margin: 0;
+}
+
+.githubLink img {
+    filter: invert(100%);
+    width: 30px;
+    transform: rotate(-45deg);
+    margin-right: 5px;
+}
