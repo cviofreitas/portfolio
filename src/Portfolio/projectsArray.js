@@ -10,7 +10,8 @@ import JeopardyDesktop from './thumbnails/JeopardyDesktop.png'
 import JeopardyMobile from './thumbnails/JeopardyMobile.png'
 import MemeGeneratorDesktop from './thumbnails/MemeGeneratorDesktop.png'
 import TravelDesktop from './thumbnails/TravelDesktop.png'
-
+import ParkTerraceMobile from './thumbnails/ParkTerraceMobile.png'
+import ParkTerraceDesktop from './thumbnails/ParkTerraceDesktop.png'
 
 import jQuery from '../HomePage/logos/jQuery.png'
 import MaterialUi from '../HomePage/logos/MaterialUi.png'
@@ -33,6 +34,17 @@ const projectsArray = [
         title: 'Proma',
         subTitle: 'Project Management App (React App)',
         description: 'A fully responsive mobile and desktop app featuring an easy to use invocing system. Create and edit invoices with only a few clicks.'
+
+    },
+    {
+        deskTopThumbnail: [ParkTerraceDesktop],
+        mobileThumbnail: [ParkTerraceMobile],
+        link: 'https://ptswimtennis.com/',
+        githubLink: 'https://github.com/cviofreitas/',
+        languages: [Reactlogo, Redux, MaterialUi, css, html, js],
+        title: 'Park Terrace Swim and Tennis',
+        subTitle: 'Country Club Website',
+        description: "Desgined and built website for one of DAXKO's clients. Features a fully responsive design, and a custom CMS for easy content management."
 
     },
     {
