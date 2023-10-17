@@ -33,7 +33,7 @@ const projectsArray = [
         languages: [Reactlogo, Redux, MaterialUi, css, html, js, Nodejs],
         title: 'Proma',
         subTitle: 'Project Management App (React App)',
-        description: 'A fully responsive mobile and desktop app featuring an easy to use invocing system. Create and edit invoices with only a few clicks.'
+        description: 'A fully responsive mobile and desktop app featuring an easy to use invoicing system. Create and edit invoices with only a few clicks.'
 
     },
     {
@@ -44,7 +44,7 @@ const projectsArray = [
         languages: [Reactlogo, Redux, MaterialUi, css, html, js],
         title: 'Park Terrace Swim and Tennis',
         subTitle: 'Country Club Website',
-        description: "Desgined and built website for one of DAXKO's clients. Features a fully responsive design, and a custom CMS for easy content management."
+        description: "Designed and built website for one of DAXKO's clients. Features a fully responsive design, and a custom CMS for easy content management."
 
     },
     {
@@ -99,7 +99,7 @@ const projectsArray = [
         languages: [css, html, js],
         title: 'Meme Generator',
         subTitle: '',
-        description: "My first attempt at coding anything. I've come a long way since then, but it's cool to see that even then I was thinking about UI/UX"
+        description: "My first attempt at coding anything. I've come a long way since then, but it's cool to see that even then I was thinking about UI/UX."
 
     },
     {
