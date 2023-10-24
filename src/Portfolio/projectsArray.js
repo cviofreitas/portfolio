@@ -12,6 +12,8 @@ import MemeGeneratorDesktop from './thumbnails/MemeGeneratorDesktop.png'
 import TravelDesktop from './thumbnails/TravelDesktop.png'
 import ParkTerraceMobile from './thumbnails/ParkTerraceMobile.png'
 import ParkTerraceDesktop from './thumbnails/ParkTerraceDesktop.png'
+import BNGRhodeIslandMobile from './thumbnails/BNGRhodeIslandMobile.png'
+import BNGRhodeIslandDesktop from './thumbnails/BNGRhodeIslandDesktop.png'
 
 import jQuery from '../HomePage/logos/jQuery.png'
 import MaterialUi from '../HomePage/logos/MaterialUi.png'
@@ -23,6 +25,7 @@ import Python from '../HomePage/logos/Python.png'
 import Reactlogo from '../HomePage/logos/Reactlogo.png'
 import Redux from '../HomePage/logos/Redux.png'
 import typescript from '../HomePage/logos/typescript.png'
+import WordPress from '../HomePage/logos/WordPressLogo.png'
 
 const projectsArray = [
     {
@@ -30,10 +33,21 @@ const projectsArray = [
         mobileThumbnail: [PromaMobile],
         link: 'https://proma-project-manager.vercel.app/',
         githubLink: 'https://github.com/cviofreitas/proma_project_manager',
-        languages: [Reactlogo, Redux, MaterialUi, css, html, js, Nodejs],
+        languages: [typescript, Reactlogo, Redux, MaterialUi, css, html, js, Nodejs],
         title: 'Proma',
         subTitle: 'Project Management App (React App)',
         description: 'A fully responsive mobile and desktop app featuring an easy to use invoicing system. Create and edit invoices with only a few clicks.'
+
+    },
+    {
+        deskTopThumbnail: [BNGRhodeIslandDesktop],
+        mobileThumbnail: [BNGRhodeIslandMobile],
+        link: 'https://bgcnri.org/',
+        githubLink: 'https://github.com/cviofreitas/',
+        languages: [WordPress, css, html, js],
+        title: 'Boys & Girl Club, Rhode Island',
+        subTitle: 'Davey Award Winning Website',
+        description: "Contributed to the frontend development for one of DAXKO's large enterprise clients. This project won a Davey Award for the category of Features-Website Redesign"
 
     },
     {
@@ -41,12 +55,13 @@ const projectsArray = [
         mobileThumbnail: [ParkTerraceMobile],
         link: 'https://ptswimtennis.com/',
         githubLink: 'https://github.com/cviofreitas/',
-        languages: [Reactlogo, Redux, MaterialUi, css, html, js],
+        languages: [WordPress, css, html, js],
         title: 'Park Terrace Swim and Tennis',
         subTitle: 'Country Club Website',
         description: "Designed and built website for one of DAXKO's clients. Features a fully responsive design, and a custom CMS for easy content management."
 
     },
+
     {
         deskTopThumbnail: [ShoppingCartDesktop],
         mobileThumbnail: [ShoppingCartMobile],
