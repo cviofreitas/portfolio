@@ -4,8 +4,9 @@ import LandingPage from "./LandingPage";
 import './App.css'
 import HomePage from "./HomePage/HomePage";
 import NavBar from "./Navbar/NavBar"
-import Porftolio from "./Portfolio/Porftolio";
+
 import Lines from "./Decoration/Lines";
+import PhotographyPage from "./Photography/PhotographyPage";
 function App() {
   const [displayPages, setDisplayPages] = useState(false)
 
@@ -22,9 +23,8 @@ function App() {
               <NavBar />
               <Routes>
                 <Route path='/' element={<HomePage />} />
-
+                <Route path='/photography' element={<PhotographyPage />} />
               </Routes>
-              <Porftolio />
               <Lines />
             </>
 

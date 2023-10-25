@@ -1,0 +1,53 @@
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+
+.photography-portfolio {
+    display: flex;
+    /* justify-content: center; */
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 10px;
+    height: calc(100vh - 75px - 40px);
+    padding: 20px;
+}
+
+.photography-portfolio .photography-summary {
+    width: 20%;
+    left: 20px;
+    color: var(--white);
+
+}
+
+
+
+.photography-portfolio .container {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    max-width: 1580px;
+    width: 100%;
+    overflow-x: scroll;
+
+}
+
+.photography-portfolio img {
+    object-fit: cover;
+    opacity: 1;
+    height: 50vh;
+    animation: fadeIn 3s;
+    background-color: var(--darkBlue);
+}
+
+.photography-portfolio img .selected {
+    scale: 2;
+}

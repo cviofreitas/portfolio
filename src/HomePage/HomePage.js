@@ -1,5 +1,6 @@
 import React from "react";
 import { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import "./HomePage.css";
 import me from "./ProfilePicture.JPG";
 import jQuery from "./logos/jQuery.png";
@@ -16,9 +17,11 @@ import WordPress from "./logos/WordPressLogo.png"
 import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
 
 import { useClickAway } from "@uidotdev/usehooks";
+import Porftolio from "../Portfolio/Porftolio";
 const HomePage = () => {
     const [scrollPosition, setScrollPosition] = useState(0);
-    const [aboutSelected, setAboutSelected] = useState(true)
+    const [aboutSelected, setAboutSelected] = useState(true);
+
 
     const languagesArray = [html, css, js, typescript, jQuery, Reactlogo, Redux, Python, Nodejs, MaterialUi, WordPress]
 
@@ -40,6 +43,11 @@ const HomePage = () => {
             top: num,
             behavior: "smooth",
         });
+    }
+
+    const navigate = useNavigate()
+    function handleNavigate() {
+        navigate('/photography')
     }
 
     return (
@@ -79,22 +87,13 @@ const HomePage = () => {
 
                     </div>
 
-                    {/* <div className="profile-picture"
-                        style={{
-                            transform: `translateX(${scrollPosition * 1.5}px)`,
-                            opacity: `calc(1 - ${scrollPosition * 0.0035})`,
-                        }}>{
-                            aboutSelected ? <img src={me} alt="Profile" id="HomePagePicture" /> : <></>
-                        }
-
-                    </div> */}
                     <div className="profile-picture card"
                         style={{
                             transform: `translateX(${scrollPosition * 1.5}px)`,
                             opacity: `calc(1 - ${scrollPosition * 0.0035})`,
                         }}>
                         <div className={`card-inner ${!aboutSelected ? 'card-flipped' : ''}`}>
-                            <div className="card-front" ref={ref}>
+                            <div className="card-front" >
                                 <img src={me} alt="Profile" id="HomePagePicture" />
                             </div>
                             <div className="card-back" >
@@ -142,7 +141,9 @@ const HomePage = () => {
                             opacity: `calc(1 - ${scrollPosition * 0.01})`,
                         }}
                         className="ProjectsButton FlexColumn FlexCenter Desktop"
-                        onClick={() => { scrollToProjects(350) }}
+                        onClick={() => {
+                            handleNavigate()
+                        }}
                         ponter>
 
                         photography
@@ -161,6 +162,7 @@ const HomePage = () => {
                         <ArrowDropDownIcon fontSize="large" />
                     </button>
                     <button
+                        ref={ref}
                         style={{
                             transform: `translateY(${scrollPosition})`,
                             opacity: `calc(1 - ${scrollPosition * 0.01})`,
@@ -178,6 +180,7 @@ const HomePage = () => {
 
             </div>
 
+            <Porftolio />
         </div>
     );
 };
