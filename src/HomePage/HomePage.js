@@ -14,11 +14,17 @@ import Redux from "./logos/Redux.png";
 import typescript from "./logos/typescript.png";
 import WordPress from "./logos/WordPressLogo.png"
 import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
+
+import { useClickAway } from "@uidotdev/usehooks";
 const HomePage = () => {
     const [scrollPosition, setScrollPosition] = useState(0);
+    const [aboutSelected, setAboutSelected] = useState(true)
 
     const languagesArray = [html, css, js, typescript, jQuery, Reactlogo, Redux, Python, Nodejs, MaterialUi, WordPress]
 
+    const ref = useClickAway(() => {
+        setAboutSelected(true);
+    });
     useEffect(() => {
         function handleScroll() {
             setScrollPosition(window.scrollY);
@@ -56,18 +62,6 @@ const HomePage = () => {
                             With over 3 years of software development, design and project management experience, I've worked on several projects including Davey Award Winning websites as well as developing frontend code in collaboration with Webby Award Winning UI/UX teams.
                         </p>
 
-                        {/* <div>
-                            {languagesArray.map((img, index) =>
-                                <img className="LanguageLogos"
-                                    src={img}
-                                    style={{
-                                        animation: slideIn
-                                    }}
-                                    alt='language logo' />
-
-                            )}
-
-                        </div> */}
                         <div>
                             {languagesArray.map((img, index) => (
                                 <img
@@ -85,12 +79,33 @@ const HomePage = () => {
 
                     </div>
 
-                    <div
+                    {/* <div className="profile-picture"
+                        style={{
+                            transform: `translateX(${scrollPosition * 1.5}px)`,
+                            opacity: `calc(1 - ${scrollPosition * 0.0035})`,
+                        }}>{
+                            aboutSelected ? <img src={me} alt="Profile" id="HomePagePicture" /> : <></>
+                        }
+
+                    </div> */}
+                    <div className="profile-picture card"
                         style={{
                             transform: `translateX(${scrollPosition * 1.5}px)`,
                             opacity: `calc(1 - ${scrollPosition * 0.0035})`,
                         }}>
-                        <img src={me} alt="Profile" id="HomePagePicture" />
+                        <div className={`card-inner ${!aboutSelected ? 'card-flipped' : ''}`}>
+                            <div className="card-front" ref={ref}>
+                                <img src={me} alt="Profile" id="HomePagePicture" />
+                            </div>
+                            <div className="card-back" >
+                                <p>
+                                    With a blend of <b>architecture</b> and <b>frontend development</b>, I bring the world of design and creativity to the digital realm. My background in architecture and design is a symphony of aesthetics and functionality, enabling me to create digital spaces that seamlessly marry <b>form</b> and <b>function</b>. As an architect designs awe-inspiring buildings, I craft captivating UI/UX, where every line of code is an architectural blueprint, and every user interface is a work of art.
+                                </p>
+                                <p>
+                                    Meticulous attention to detail and appreciation for aesthetics is the foundation of who I am as a Frontend Developer, ensuring that every pixel and interaction is not just code but a masterpiece. Coding isn't just about functionality; it's about orchestrating digital experiences that echo the elegance and precision of architects like Le Corbusier. In the ever-evolving world of frontend development, I want to bring a unique architectural touch, turning web pages into digital masterpieces that <b>invite, captivate, and inspire.</b>
+                                </p>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
@@ -116,22 +131,49 @@ const HomePage = () => {
                     </div>
 
                     <div>
-                        <img src={me} alt="Picture of me" id="HomePagePicture" />
+                        <img src={me} alt="Profile" id="HomePagePicture" />
                     </div>
                 </div>
 
-                <button
-                    style={{
-                        transform: `translateY(${scrollPosition})`,
-                        opacity: `calc(1 - ${scrollPosition * 0.01})`,
-                    }}
-                    className="ProjectsButton FlexColumn FlexCenter Desktop"
-                    onClick={() => { scrollToProjects(350) }}
-                    ponter>
+                <div className="FlexRow FlexBetween Desktop MarginTop20" style={{ width: '1200px' }}>
+                    <button
+                        style={{
+                            transform: `translateY(${scrollPosition})`,
+                            opacity: `calc(1 - ${scrollPosition * 0.01})`,
+                        }}
+                        className="ProjectsButton FlexColumn FlexCenter Desktop"
+                        onClick={() => { scrollToProjects(350) }}
+                        ponter>
 
-                    projects
-                    <ArrowDropDownIcon fontSize="large" />
-                </button>
+                        photography
+
+                    </button>
+                    <button
+                        style={{
+                            transform: `translateY(${scrollPosition})`,
+                            opacity: `calc(1 - ${scrollPosition * 0.01})`,
+                        }}
+                        className="ProjectsButton FlexColumn FlexCenter Desktop"
+                        onClick={() => { scrollToProjects(350) }}
+                        ponter>
+
+                        projects
+                        <ArrowDropDownIcon fontSize="large" />
+                    </button>
+                    <button
+                        style={{
+                            transform: `translateY(${scrollPosition})`,
+                            opacity: `calc(1 - ${scrollPosition * 0.01})`,
+                        }}
+                        className="ProjectsButton FlexColumn FlexCenter Desktop"
+                        onClick={() => setAboutSelected(!aboutSelected)}
+                        ponter>
+
+                        about
+
+                    </button>
+                </div>
+
 
 
             </div>
