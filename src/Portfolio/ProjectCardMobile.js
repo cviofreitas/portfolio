@@ -11,10 +11,12 @@ const ProjectCardMobile = ({ project, index, direction }) => {
                         src={project.deskTopThumbnail} />
 
                     <div class="MobileProjectHeader">
-                        <div className='ProjectHeader'>
-                            <h3>
-                                {project.title}
-                            </h3>
+                        <div className='ProjectHeader FlexColumn'>
+                            <div>
+                                <h3>
+                                    {project.title}
+                                </h3>
+                            </div>
                             <div className='ProjectLinks' >
                                 <a href={project.githubLink} target='blank'>
                                     <img src={GitHubLinkIcon} alt='git hub link' />
@@ -25,7 +27,7 @@ const ProjectCardMobile = ({ project, index, direction }) => {
                                         style={{
                                             rotate: '-45deg'
                                         }} />
-                                    <h3>url</h3>
+                                    <h3>visit</h3>
                                 </a>
                             </div>
                         </div>

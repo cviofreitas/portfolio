@@ -70,7 +70,7 @@ const HomePage = () => {
                             With over 3 years of software development, design and project management experience, I've worked on several projects including Davey Award Winning websites as well as developing frontend code in collaboration with Webby Award Winning UI/UX teams.
                         </p>
 
-                        <div>
+                        <div >
                             {languagesArray.map((img, index) => (
                                 <img
                                     key={index}
@@ -180,7 +180,10 @@ const HomePage = () => {
 
             </div>
 
+
             <Porftolio />
+
+
         </div>
     );
 };

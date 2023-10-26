@@ -11,20 +11,6 @@ const Porftolio = () => {
     const [count, setCount] = useState(0)
     const [direction, setDirection] = useState('')
 
-    // old code for carousel *not in use*
-
-    // const carouselArray = (array, currValue) => {
-    //     let newArray = []
-
-    //     if (currValue == array.length || currValue <= 0 - array.length) { setCount(0) }
-    //     newArray.push(array.at(currValue))
-    //     newArray.unshift(array.at(currValue - 1))
-    //     newArray.unshift(array.at(currValue - 2))
-    //     newArray.push(array.at(currValue > array.length - 2 ? 0 : currValue + 1))
-    //     newArray.push(array.at(currValue > array.length - 2 ? 1 : currValue + 2))
-    //     return (newArray)
-    // }
-
     const [scrollPosition, setScrollPosition] = useState(0);
     const [indexNum, setIndexNum] = useState(-1)
 
@@ -39,8 +25,6 @@ const Porftolio = () => {
             window.removeEventListener("scroll", handleScroll);
         };
     }, [scrollPosition]);
-
-
 
 
     return (

@@ -49,13 +49,13 @@ const PhotographyPage = () => {
             <div className='container'>
 
 
-                <img src={Classic} alt='Classic' />
                 <img src={Ferry} alt='Ferry' />
                 <img src={NYGrind} alt='New york Worker' />
-
                 <img src={WTC} alt='World Trade Center' />
-                <img src={NewYorkWorker} alt='New York Worker' />
+
+                <img src={Classic} alt='Classic' />
                 <img src={GoldenGateBridge} alt='Golden Gate Bridge' />
+                <img src={NewYorkWorker} alt='New York Worker' />
 
                 <img src={ThroughTheTrees} alt='Tree sunrise' />
                 <img src={Lot} alt='Lot' />

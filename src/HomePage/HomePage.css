@@ -12,22 +12,19 @@
 
 .HomePageContainer {
     position: relative;
-    top: 75px;
     animation: fadeIn 3s;
     padding-left: 5vw;
     padding-right: 5vw;
     display: flex;
     justify-content: center;
-
-
-
+    padding: 5vh;
 }
 
 
 #HomePagePicture {
     width: 400px;
     height: 530px;
-    border-radius: 5px;
+    border-radius: 10px;
 }
 
 .ProjectsButton {
@@ -48,9 +45,8 @@
 .HomePageInfoContainer {
     position: fixed;
     max-width: 1200px;
-    padding: 20px;
     height: fit-content;
-    border-radius: 20px;
+
 }
 
 .HomePageInfoContainer h3 {
@@ -110,7 +106,6 @@
 
 .card-back p {
     padding: 20px 20px 0 20px;
-
     color: black;
     margin: 0;
     font-size: .956rem;
@@ -118,7 +113,6 @@
 }
 
 .card-back p b {
-
     font-family: var(--Font2);
 }
 
@@ -133,14 +127,12 @@
 
 
 
-@media only screen and (max-width: 900px) {
+@media only screen and (max-width: 600px) {
 
     .LanguageLogos {
-        height: 21px;
-        width: 21px;
+        height: 25px;
+        width: 25px;
     }
-
-
 
     .AboutMeInfo h3 {
         font-size: 1rem;
@@ -149,17 +141,18 @@
     .HomePageContainer {
         top: -50px;
         position: relative;
+        flex-direction: column;
+        justify-content: center;
+        padding: 20px;
     }
 
     .HomePageInfoContainer {
         margin-top: 10px;
-        flex-direction: column;
-        padding-bottom: 5vh;
-        width: 100vw;
+        padding-bottom: 10vh;
+        width: 100%;
         flex-direction: column;
         position: relative;
     }
-
 
     .AboutMeInfo {
         width: 400px;
@@ -170,15 +163,13 @@
         width: 400px;
         height: auto;
     }
-}
 
-@media only screen and (max-width: 600px) {
     .AboutMeInfo {
         width: 90%;
     }
 
     #HomePagePicture {
-        width: 80vw;
-        padding-top: 20px;
+        width: 100%;
+
     }
 }
