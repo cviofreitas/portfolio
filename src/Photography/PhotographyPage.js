@@ -1,22 +1,22 @@
 import React from 'react'
 
-import Classic from './images/Classic.jpg'
-import Coastal from './images/Coastal.jpg'
-import CreekBridge from './images/CreekBridge.jpg'
-import Ferry from './images/Ferry.jpg'
-import Frozen from './images/Frozen.jpg'
-import GoldenGateBridge from './images/GoldenGateBridge.jpg'
-import hawaii from './images/hawaii.jpg'
-import Heavenly from './images/Heavenly.jpg'
-import Horse from './images/Horse.jpg'
-import HouseOfRefuge from './images/HouseOfRefuge.jpg'
-import HouseOnAPrarie from './images/HouseOnAPrarie.jpg'
-import Isolated from './images/Isolated.jpg'
-import LaurenCanonBeach from './images/LaurenCanonBeach.jpg'
-import LaurenHillside from './images/LaurenHillside.jpg'
-import LightBreak from './images/LightBreak.jpg'
-import Lot from './images/Lot.jpg'
-import ManOnABoat from './images/ManOnABoat.jpg'
+import Classic from './images2/Classic.jpg'
+import Coastal from './images2/Coastal.jpg'
+import CreekBridge from './images2/CreekBridge.jpg'
+import Ferry from './images2/Ferry.jpg'
+import Frozen from './images2/Frozen.jpg'
+import GoldenGateBridge from './images2/GoldenGateBridge.jpg'
+import hawaii from './images2/hawaii.jpg'
+import Heavenly from './images2/Heavenly.jpg'
+import Horse from './images2/Horse.jpg'
+import HouseOfRefuge from './images2/HouseOfRefuge.jpg'
+import HouseOnAPrarie from './images2/HouseOnAPrarie.jpg'
+import Isolated from './images2/Isolated.jpg'
+import LaurenCanonBeach from './images2/LaurenCanonBeach.jpg'
+import LaurenHillside from './images2/LaurenHillside.jpg'
+import LightBreak from './images2/LightBreak.jpg'
+import Lot from './images2/Lot.jpg'
+import ManOnABoat from './images2/ManOnABoat.jpg'
 import NewYorkWorker from './images/NewYorkWorker.jpg'
 import NYGrind from './images/NYGrind.jpg'
 import OldTown from './images/OldTown.jpg'
@@ -94,6 +94,8 @@ const PhotographyPage = () => {
                 <img loading='lazy' src={ManOnABoat} alt='Man on a boat' />
                 <img loading='lazy' src={StormRising} alt='Stormy beach' />
                 <img loading='lazy' src={HouseOfRefuge} alt='House Of Refuge' />
+
+                <iframe src="https://drive.google.com/file/d/1Ik81MnLoie_JGwY__EL6EwwVRdsgj3a4/preview" width="640" height="480" allow="autoplay"></iframe>
             </div>
 
 
