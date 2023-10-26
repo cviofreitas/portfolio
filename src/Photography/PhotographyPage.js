@@ -1,4 +1,5 @@
-import React from 'react'
+import React, { useState } from 'react'
+import { useClickAway } from "@uidotdev/usehooks";
 
 import Classic from './images2/Classic.jpg'
 import Coastal from './images2/Coastal.jpg'
@@ -36,6 +37,152 @@ import StormRising from './images2/StormRising.jpg'
 
 import './PhotographyPage.css'
 const PhotographyPage = () => {
+    const [largeImgIndex, setLargeImageIndex] = useState(null)
+
+    function handleClick(index) {
+        console.log('clicked')
+        setLargeImageIndex(index)
+    }
+
+    const ref = useClickAway(() => {
+        setLargeImageIndex(null);
+    });
+    const portfolio = [
+        {
+            src: Ferry,
+            alt: 'Ferry',
+        },
+        {
+            src: NYGrind,
+            alt: 'New York Worker',
+        },
+        {
+            src: WTC,
+            alt: 'World Trade Center',
+        },
+        {
+            src: Classic,
+            alt: 'Classic',
+        },
+        {
+            src: GoldenGateBridge,
+            alt: 'Golden Gate Bridge',
+        },
+        {
+            src: NewYorkWorker,
+            alt: 'New York Worker',
+        },
+        {
+            src: ThroughTheTrees,
+            alt: 'Tree sunrise',
+        },
+        {
+            src: Lot,
+            alt: 'Lot',
+        },
+        {
+            src: Coastal,
+            alt: 'Coastal',
+        },
+        {
+            src: LaurenHillside,
+            alt: 'Lauren Hillside',
+        },
+        {
+            src: Isolated,
+            alt: 'Isolated',
+        },
+        {
+            src: Heavenly,
+            alt: 'Heavenly',
+        },
+        {
+            src: CreekBridge,
+            alt: 'Creek Bridge',
+        },
+        {
+            src: HouseOnAPrarie,
+            alt: 'House On A Prarie',
+        },
+        {
+            src: Horse,
+            alt: 'Horse',
+        },
+        {
+            src: OldTown,
+            alt: 'Old Town',
+        },
+        {
+            src: LightBreak,
+            alt: 'Light Break',
+        },
+        {
+            src: Pond,
+            alt: 'Pond',
+        },
+        {
+            src: Sign,
+            alt: 'Signs',
+        },
+        {
+            src: Reflection,
+            alt: 'Reflection',
+        },
+        {
+            src: Riding,
+            alt: 'Riding',
+        },
+        {
+            src: TurquoiseSunset,
+            alt: 'Coastal sunset',
+        },
+        {
+            src: TheRock,
+            alt: 'Rock',
+        },
+        {
+            src: StarryNight,
+            alt: 'Milky Way',
+        },
+        {
+            src: Waterfall,
+            alt: 'Waterfall',
+        },
+        {
+            src: hawaii,
+            alt: 'Hawaii Beach',
+        },
+        {
+            src: Waiting,
+            alt: 'Waiting',
+        },
+        {
+            src: LaurenCanonBeach,
+            alt: 'Lauren Canon Beach',
+        },
+        {
+            src: Frozen,
+            alt: 'Frozen',
+        },
+        {
+            src: Foggy,
+            alt: 'Foggy path',
+        },
+        {
+            src: ManOnABoat,
+            alt: 'Man on a boat',
+        },
+        {
+            src: StormRising,
+            alt: 'Stormy beach',
+        },
+        {
+            src: HouseOfRefuge,
+            alt: 'House Of Refuge',
+        },
+    ];
+
+
     return (
         <div className='photography-portfolio'>
             <div className='photography-summary'>
@@ -47,55 +194,26 @@ const PhotographyPage = () => {
                 </h3>
             </div>
             <div className='container'>
-
-
-                <img src={Ferry} alt='Ferry' />
-                <img src={NYGrind} alt='New york Worker' />
-                <img src={WTC} alt='World Trade Center' />
-
-                <img src={Classic} alt='Classic' />
-                <img src={GoldenGateBridge} alt='Golden Gate Bridge' />
-                <img src={NewYorkWorker} alt='New York Worker' />
-
-                <img src={ThroughTheTrees} alt='Tree sunrise' />
-                <img src={Lot} alt='Lot' />
-                <img src={Coastal} alt='Coastal' />
-
-                <img src={LaurenHillside} alt='Lauren Hillside' />
-                <img src={Isolated} alt='Isolated' />
-                <img src={Heavenly} alt='Heavenly' />
-
-                <img src={CreekBridge} alt='Creek Bridge' />
-                <img src={HouseOnAPrarie} alt='House On A Prarie' />
-                <img src={Horse} alt='Horse' />
-
-                <img src={OldTown} alt='Old Town' />
-                <img src={LightBreak} alt='Light Break' />
-                <img src={Pond} alt='Pond' />
-
-                <img src={Sign} alt='Signs' />
-                <img src={Reflection} alt='Reflection' />
-                <img src={Riding} alt='Riding' />
-
-                <img src={TurquoiseSunset} alt='Coastal sunset' />
-                <img src={TheRock} alt='Rock' />
-                <img src={StarryNight} alt='Milky Way' />
-
-                <img src={Waterfall} alt='Waterfall' />
-                <img src={hawaii} alt='Golden Gate Bridge' />
-                <img src={Waiting} alt='Waiting' />
-
-                <img src={LaurenCanonBeach} alt='Lauren Canon Beach' />
-                <img src={Frozen} alt='Frozen' />
-                <img src={Foggy} alt='Foggy path' />
-
-
-                <img src={ManOnABoat} alt='Man on a boat' />
-                <img src={StormRising} alt='Stormy beach' />
-                <img src={HouseOfRefuge} alt='House Of Refuge' />
-
-
+                {portfolio.map((image, index) =>
+                    <img
+                        onClick={() => handleClick(index)}
+                        src={image.src}
+                        alt={image.alt}
+                    />)}
             </div>
+            {largeImgIndex != null ?
+                <div className='high-lighted-image-container'>
+
+                    {portfolio.filter((image, index) => index === largeImgIndex).map(image =>
+                        <img
+                            ref={ref}
+                            src={image.src}
+                            alt={image.alt} />
+                    )}
+                </div>
+                :
+                <></>}
+
 
 
         </div>

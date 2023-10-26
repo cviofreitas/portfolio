@@ -46,8 +46,37 @@
     height: 50vh;
     animation: fadeIn 3s;
     background-color: var(--darkBlue);
+    cursor: pointer;
+}
+
+.photography-portfolio img:hover {
+    opacity: .8;
 }
 
 .photography-portfolio img .selected {
     scale: 2;
+}
+
+.high-lighted-image-container {
+    position: absolute;
+    background-color: #0a1a27db;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.high-lighted-image-container img {
+    height: calc(100vh - 75px);
+    top: 75px;
+    animation: none;
+
+}
+
+.high-lighted-image-container img:hover {
+    opacity: 1;
 }
