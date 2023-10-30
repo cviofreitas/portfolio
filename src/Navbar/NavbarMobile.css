@@ -20,6 +20,7 @@
     .navbar-mobile .menu-button {
         font-size: 3rem;
         height: 60px;
+        width: 60px;
         background: none;
         border: none;
         color: var(--lightGray);
