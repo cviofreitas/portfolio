@@ -1,17 +1,13 @@
 @media only screen and (max-width: 600px) {
     .navbar-mobile {
         height: 100px;
-        /* background-color: var(--darkestBlue); */
         position: fixed;
-        width: calc(100vw - 40px);
+        width: 100vw;
         top: 0px;
-
         z-index: 20;
         display: flex;
         justify-content: flex-end;
         align-items: center;
-        padding-left: 20px;
-        padding-right: 20px;
         transition: all .5s;
 
     }
@@ -28,7 +24,7 @@
         border: none;
         color: var(--lightGray);
         position: absolute;
-        right: 0px;
+        right: 20px;
         top: 20px;
         transition: all 1s;
     }
