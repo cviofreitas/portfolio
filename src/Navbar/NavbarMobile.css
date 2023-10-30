@@ -25,9 +25,9 @@
         border: none;
         color: var(--lightGray);
         position: absolute;
-        top: 20px;
         transition: all 1s;
         background-color: antiquewhite;
+        padding: 0;
     }
 
     .drop-down .menu-button {
