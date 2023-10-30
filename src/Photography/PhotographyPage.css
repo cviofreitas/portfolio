@@ -80,3 +80,28 @@
 .high-lighted-image-container img:hover {
     opacity: 1;
 }
+
+@media only screen and (max-width: 600px) {
+    .photography-portfolio {
+        flex-direction: column;
+        height: fit-content;
+        gap: 20px;
+        background-color: var(--darkestBlue);
+        margin-top: 75px;
+    }
+
+    .photography-portfolio .photography-summary {
+        width: 100%;
+    }
+
+    .photography-portfolio .photography-summary h3 {
+        font-size: 1.5rem;
+    }
+
+    .photography-portfolio img {
+        height: auto;
+        width: 100%;
+        margin-top: 10px;
+        pointer-events: none;
+    }
+}

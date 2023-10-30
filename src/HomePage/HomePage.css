@@ -139,7 +139,7 @@
     }
 
     .HomePageContainer {
-        top: -50px;
+        margin-top: 75px;
         position: relative;
         flex-direction: column;
         justify-content: center;

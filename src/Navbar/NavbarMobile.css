@@ -1,0 +1,73 @@
+@media only screen and (max-width: 600px) {
+    .navbar-mobile {
+        height: 100px;
+        /* background-color: var(--darkestBlue); */
+        position: fixed;
+        width: calc(100vw - 40px);
+        top: 0px;
+
+        z-index: 3;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        padding-left: 20px;
+        padding-right: 20px;
+        transition: all .5s;
+
+    }
+
+    .drop-down {
+        height: 200px;
+        background-color: var(--darkBlue);
+    }
+
+    .navbar-mobile .menu-button {
+        font-size: 3rem;
+        height: 60px;
+        background: none;
+        border: none;
+        color: var(--lightGray);
+        position: absolute;
+        right: 20px;
+        top: 20px;
+        transition: all 1s;
+    }
+
+    .drop-down .menu-button {
+        transform: rotate(135deg)
+    }
+
+    .navbar-option-mobile {
+        background: none;
+        border: none;
+        font-family: var(--Font1);
+        font-size: 1.8rem;
+        color: var(--lightGray);
+    }
+
+    .navbar-option-container-mobile.show {
+        height: 50%;
+        align-self: flex-end;
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+        align-items: flex-end;
+        gap: 10px;
+        overflow: hidden;
+        padding-bottom: 10px;
+        opacity: 1;
+    }
+
+    .navbar-option-container-mobile {
+        display: none;
+        opacity: 0;
+        transition: all 1s;
+
+    }
+}
+
+@media only screen and (min-width: 600px) {
+    .navbar-mobile {
+        display: none;
+    }
+}

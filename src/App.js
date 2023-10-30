@@ -7,6 +7,7 @@ import NavBar from "./Navbar/NavBar"
 
 import Lines from "./Decoration/Lines";
 import PhotographyPage from "./Photography/PhotographyPage";
+import NavbarMobile from "./Navbar/NavbarMobile";
 function App() {
   const [displayPages, setDisplayPages] = useState(false)
 
@@ -21,6 +22,7 @@ function App() {
           displayPages ?
             <>
               <NavBar />
+              <NavbarMobile />
               <Routes>
                 <Route path='/' element={<HomePage />} />
                 <Route path='/photography' element={<PhotographyPage />} />

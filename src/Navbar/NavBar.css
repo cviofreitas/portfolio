@@ -23,3 +23,9 @@
     color: var(--gray);
     scale: 1.05;
 }
+
+@media only screen and (max-width: 600px) {
+    .NavBarContainer {
+        display: none;
+    }
+}

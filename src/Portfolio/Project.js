@@ -1,8 +1,6 @@
 import React from "react";
 import { useState, useEffect } from "react";
-import GitHubLinkIcon from "./GitHubLink.png";
 import LinkIcon from "./LinkIcon.png";
-import macbookpng from "../images/macbookpng.png";
 import "./Project.css";
 const Project = ({ project }) => {
     const [scrollPosition, setScrollPosition] = useState(0);
