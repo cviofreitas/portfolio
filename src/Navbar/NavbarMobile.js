@@ -17,7 +17,8 @@ const NavbarMobile = () => {
     return (
         <div
             className={`navbar-mobile ${menuSelected ? 'drop-down' : ''}`}>
-            <button className='menu-button' onClick={() => setMenuSelected(!menuSelected)}>
+            <button className='menu-button' onClick={() => setMenuSelected(!menuSelected)}
+                ref={ref}>
                 +
             </button>
             <div className={`navbar-option-container-mobile ${menuSelected ? 'show' : ''}`}

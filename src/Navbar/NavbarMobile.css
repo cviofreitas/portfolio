@@ -24,7 +24,6 @@
         border: none;
         color: var(--lightGray);
         position: absolute;
-        right: 20px;
         top: 20px;
         transition: all 1s;
     }
